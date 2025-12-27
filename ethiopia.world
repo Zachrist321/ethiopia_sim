@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="ethiopia_search">
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <include><uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri></include>
+    <include><uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri></include>
+
+    <!-- State Markers based on Figure 1 positions -->
+    <model name="Addis_Ababa">
+      <static>true</static><pose>0 0 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    
+    <model name="Adama">
+      <static>true</static><pose>2 -0.5 0.05 0 0 0</pose>
+      <link name="link"><visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.1</length></cylinder></geometry></visual></link>
+    </model>
+    
+    <!-- Add other markers for all cities in the figure... -->
+  </world>
+</sdf>
