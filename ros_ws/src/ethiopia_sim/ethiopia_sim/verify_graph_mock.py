@@ -8,8 +8,8 @@ sys.modules['geometry_msgs'] = MagicMock()
 sys.modules['geometry_msgs.msg'] = MagicMock()
 
 # Now import the search node
-from ethiopia_search import EthiopiaSearchNode
-from ethiopia_graph import ETHIOPIA_GRAPH
+from .ethiopia_search import EthiopiaSearchNode
+from .ethiopia_graph import ETHIOPIA_GRAPH
 
 # Initialize node manually without calling super init (since we mocked the base class)
 # But wait, python mocks might not behave like real classes for inheritance unless setup right.
@@ -36,3 +36,4 @@ for i in range(len(path)-1):
     assert v in node.graph[u], f"Invalid edge: {u} -> {v}"
 
 print("Path verification PASSED.")
+

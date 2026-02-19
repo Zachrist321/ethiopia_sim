@@ -41,3 +41,4 @@ ETHIOPIA_GRAPH = {
     'Goba': ['Bale', 'Dega Habur'],
     'Sof Oumer': ['Bale', 'Kebri Dehar']
 }
+
